@@ -18,7 +18,7 @@
       switch ($_GET["status"])
       {
         case "ON":
-          exec("python3 /home/pi/Projects/Christmas-Lights2/on.py 2>&1");
+          exec("python3 /home/pi/Projects/Christmas-Lights/on.py 2>&1");
           ?>
           <div class="alert alert-success" role="alert">
             Default Program Started!
@@ -27,7 +27,7 @@
 
         break;
         case "OFF":
-          exec("python3 /home/pi/Projects/Christmas-Lights2/off.py 2>&1");
+          exec("python3 /home/pi/Projects/Christmas-Lights/off.py 2>&1");
           ?>
           <div class="alert alert-warning" role="alert">
             Default Program Stopped!
@@ -39,7 +39,7 @@
       switch ($_GET["status"])
       {
         case "ON":
-          exec("python3 /home/pi/Projects/Christmas-Lights2/relay.py ".$_GET["relay"]." ON 2>&1");
+          exec("python3 /home/pi/Projects/Christmas-Lights/relay.py ".$_GET["relay"]." ON 2>&1");
           ?>
           <div class="alert alert-success" role="alert">
             Relay <?php echo $_GET["relay"]; ?> ON.
@@ -47,7 +47,7 @@
           <?php
         break;
         case "OFF":
-          exec("python3 /home/pi/Projects/Christmas-Lights2/relay.py ".$_GET["relay"]." OFF 2>&1");
+          exec("python3 /home/pi/Projects/Christmas-Lights/relay.py ".$_GET["relay"]." OFF 2>&1");
           
           ?>
           <div class="alert alert-warning" role="alert">
