@@ -5,10 +5,13 @@ todayMonth = datetime.date.today().month
 todayDay = datetime.date.today().day
 
 if todayMonth == 11:
-    if todayDay > 12:
+    if todayDay >= 12:
         startLights()
 elif todayMonth == 12:
     startLights()
+elif todayMonth == 1:
+    if todayDay == 1:
+        startLights()
 
 
 def startLights():
