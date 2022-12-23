@@ -9,7 +9,7 @@ address = ('localhost', 5000)
 server = ''
 
 # Set Relay GPIO pins
-Relays = [4, 17, 27, 22]
+Relays = [23, 17, 27, 22]
 
 # Set Duration for flash
 durationTime = '00:00:30'
@@ -30,8 +30,7 @@ def setup():
     GPIO.setwarnings(True)
     
     for i in Relays:
-        GPIO.setup(i, GPIO.OUT)
-        relay(i, GPIO.HIGH)
+        GPIO.setup(i, GPIO.OUT, initial=GPIO.HIGH)
 
 def main():
     global server, lightStatus
